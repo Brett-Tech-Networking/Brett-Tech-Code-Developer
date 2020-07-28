@@ -1,0 +1,16 @@
+D:\Documents\github\Brett-Tech-Code-Developer\Brett Tech Live Web Developer\bin\Debug\Brett Tech Code Developer.exe.config
+D:\Documents\github\Brett-Tech-Code-Developer\Brett Tech Live Web Developer\bin\Debug\Brett Tech Code Developer.exe
+D:\Documents\github\Brett-Tech-Code-Developer\Brett Tech Live Web Developer\bin\Debug\Brett Tech Code Developer.pdb
+D:\Documents\github\Brett-Tech-Code-Developer\Brett Tech Live Web Developer\bin\Debug\FastColoredTextBox.dll
+D:\Documents\github\Brett-Tech-Code-Developer\Brett Tech Live Web Developer\bin\Debug\MetroFramework.Design.dll
+D:\Documents\github\Brett-Tech-Code-Developer\Brett Tech Live Web Developer\bin\Debug\MetroFramework.dll
+D:\Documents\github\Brett-Tech-Code-Developer\Brett Tech Live Web Developer\bin\Debug\MetroFramework.Fonts.dll
+D:\Documents\github\Brett-Tech-Code-Developer\Brett Tech Live Web Developer\bin\Debug\FastColoredTextBox.xml
+D:\Documents\github\Brett-Tech-Code-Developer\Brett Tech Live Web Developer\obj\Debug\Brett Tech Live Web Developer.csprojAssemblyReference.cache
+D:\Documents\github\Brett-Tech-Code-Developer\Brett Tech Live Web Developer\obj\Debug\Brett_Tech_Live_Web_Developer.Form1.resources
+D:\Documents\github\Brett-Tech-Code-Developer\Brett Tech Live Web Developer\obj\Debug\Brett_Tech_Code_Developer.Properties.Resources.resources
+D:\Documents\github\Brett-Tech-Code-Developer\Brett Tech Live Web Developer\obj\Debug\Brett Tech Live Web Developer.csproj.GenerateResource.cache
+D:\Documents\github\Brett-Tech-Code-Developer\Brett Tech Live Web Developer\obj\Debug\Brett Tech Live Web Developer.csproj.CoreCompileInputs.cache
+D:\Documents\github\Brett-Tech-Code-Developer\Brett Tech Live Web Developer\obj\Debug\Brett Tech Live Web Developer.csproj.CopyComplete
+D:\Documents\github\Brett-Tech-Code-Developer\Brett Tech Live Web Developer\obj\Debug\Brett Tech Code Developer.exe
+D:\Documents\github\Brett-Tech-Code-Developer\Brett Tech Live Web Developer\obj\Debug\Brett Tech Code Developer.pdb

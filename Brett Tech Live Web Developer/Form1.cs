@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms.VisualStyles;
+using FastColoredTextBoxNS;
 
 namespace Brett_Tech_Live_Web_Developer
 {
@@ -43,23 +45,27 @@ namespace Brett_Tech_Live_Web_Developer
 
         private void Open_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Do You want to delete current code?", "OPEN", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (fastColoredTextBox1.Text == fastColoredTextBox1.Text)
             {
-                //open menu with file choosing
-                OpenFileDialog op = new OpenFileDialog();
-
-                //filter
-                op.Filter = "HTML File|*.html|Any File|*.*";
-                if (op.ShowDialog() == DialogResult.OK)
+                if (MessageBox.Show("Do You want to delete current code?", "OPEN", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    // Read selected file
-                    StreamReader sr = new StreamReader(op.FileName);
-                    // set current file to selected
-                    currentFile = op.FileName;
-                    // Read text set code editor
-                    fastColoredTextBox1.Text = sr.ReadToEnd();
-                    // Stop reading File
-                    sr.Close();
+                    //open menu with file choosing
+                    OpenFileDialog op = new OpenFileDialog();
+
+
+                    //filter
+                    op.Filter = "Any File|*.*|HTML File|*.html";
+                    if (op.ShowDialog() == DialogResult.OK)
+                    {
+                        // Read selected file
+                        StreamReader sr = new StreamReader(op.FileName);
+                        // set current file to selected
+                        currentFile = op.FileName;
+                        // Read text set code editor
+                        fastColoredTextBox1.Text = sr.ReadToEnd();
+                        // Stop reading File
+                        sr.Close();
+                    }
                 }
             }
         }
@@ -369,6 +375,44 @@ namespace Brett_Tech_Live_Web_Developer
         private void Webpageblack_Click(object sender, EventArgs e)
         {
             fastColoredTextBox1.Text = fastColoredTextBox1.Text.Insert(fastColoredTextBox1.SelectionStart, ("  <body style='background - color:powderblue; '> "));
+
+        }
+
+        private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TabPage tp = new TabPage();
+            int tc = (metroTabControl1.TabCount + 1);
+            tp.Text = "Tab " + tc.ToString();
+            metroTabControl1.TabPages.Add(tp);
+            RichTextBox rtb = new RichTextBox();
+            rtb.Dock = DockStyle.Fill;
+            tp.Controls.Add(rtb);
+
+            return;
+        }
+
+        private void hideBrowserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                splitContainer1.Panel2Collapsed = true;
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void showLiveOutputToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                splitContainer1.Panel2Collapsed = false;
+            }
+            catch
+            {
+
+            }
 
         }
     }
