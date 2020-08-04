@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.IO;
 using System.Windows.Forms.VisualStyles;
 using FastColoredTextBoxNS;
+using System.Security.Policy;
+using Brett_Tech_Code_Developer;
 
 namespace Brett_Tech_Live_Web_Developer
 {
@@ -146,7 +148,7 @@ namespace Brett_Tech_Live_Web_Developer
 
         private void Website_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://www.Brett-TechRepair.com");
+            System.Diagnostics.Process.Start("http://www.BrettTechCoding.com");
         }
 
         private void BlackToolStripMenuItem_Click(object sender, EventArgs e)
@@ -206,7 +208,10 @@ namespace Brett_Tech_Live_Web_Developer
             {
                 webBrowser1.Visible = true;
                 fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.HTML;
+                
                 fastColoredTextBox1.Refresh();
+                Refresh();
+                
             }
             else if (HTML.Checked == false)
             {
@@ -414,6 +419,74 @@ namespace Brett_Tech_Live_Web_Developer
 
             }
 
+        }
+
+        private void relaodToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void newTabToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            TabPage tp = new TabPage();
+            int tc = (metroTabControl1.TabCount + 1);
+            tp.Text = "Tab " + tc.ToString();
+            metroTabControl1.TabPages.Add(tp);
+       
+        
+            
+            return;
+        }
+
+        private void fileExplorerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (FolderBrowserDialog fbd = new FolderBrowserDialog() { Description = "Select Your Path." })
+            {
+                if (fbd.ShowDialog() == DialogResult.OK)
+                    webBrowser1.Url = new Uri(fbd.SelectedPath);
+              
+             }
+            
+    }
+
+   
+
+        private void OpenFileButton_Click(object sender, EventArgs e)
+        {
+            
+    }
+
+        private void fontToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Allows user too choose font
+
+            FontDialog fd = new FontDialog();
+            if (fd.ShowDialog() == DialogResult.OK)
+            {
+                fastColoredTextBox1.Font = fd.Font;
+            }
+        }
+
+        private void hIdeDocMapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                documentMap1.Enabled = false;
+                documentMap1.Visible = false;
+                metroTabControl1.Dock = DockStyle.Fill;
+            }
+            catch { }
+        }
+
+        private void showDocMapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                documentMap1.Enabled = true;
+                documentMap1.Visible = true;
+                metroTabControl1.Dock = DockStyle.None;
+            }
+            catch { }
         }
     }
 }
