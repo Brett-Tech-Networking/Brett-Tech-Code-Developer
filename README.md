@@ -1,6 +1,14 @@
 # Brett-Tech-Code-Developer
-Create live websites using our code development software
+***A coding platform for all of your projects***
 
-Our tool currently allowes you to code in many languages from HTML, PHP, CSHARP, VB  & many more 
-currently our software is only set to show live output for website designs in future updates 
-we hope to add the ability to see other projects as well such as software development and more.
+![Tool Screenshots](https://github.com/Brett-Tech-Networking/Brett-Tech-Code-Developer/blob/master/CodeDeveloper.png)
+
+-Multi Language coding platform (HTML, JavaScript, cSharp, VB, XML, PHP, Lua, PowerShell
+
+-Quick insert tags html, h1, p etc...
+
+-Easy modifiers to get you started such as background colors (this will insert the code for you)
+
+-Built in help guide
+
+  
