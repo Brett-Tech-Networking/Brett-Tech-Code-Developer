@@ -130,6 +130,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="code.ico" />
+    <None Include="Resources\font.png" />
+    <None Include="Resources\redo.png" />
+    <None Include="Resources\undo.png" />
+    <None Include="Resources\paste.png" />
+    <None Include="Resources\copy.png" />
+    <None Include="Resources\cut.png" />
+    <None Include="Resources\replace.png" />
+    <None Include="Resources\find.png" />
+    <None Include="Resources\assistant.png" />
+    <None Include="Resources\website.png" />
+    <None Include="Resources\info.png" />
     <None Include="Resources\file-explorer-folder-libraries-icon-18298.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
