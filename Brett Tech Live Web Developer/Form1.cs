@@ -26,7 +26,13 @@ namespace Brett_Tech_Live_Web_Developer
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                documentMap1.Enabled = false;
+                documentMap1.Visible = false;
+                metroTabControl1.Dock = DockStyle.Fill;
+            }
+            catch { }
         }
 
         private void FastColoredTextBox1_TextChanged(object sender, FastColoredTextBoxNS.TextChangedEventArgs e)
@@ -104,10 +110,12 @@ namespace Brett_Tech_Live_Web_Developer
             }
 
         private void Exit_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Do You want to delete current code? and Exit", "EXIT", MessageBoxButtons.YesNo) == DialogResult.Yes)
+        {           
             {
-                Application.Exit();
+                if (MessageBox.Show("Do You want to delete current code? and Exit", "EXIT", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    Application.Exit();
+                }
             }
         }
 
@@ -148,7 +156,7 @@ namespace Brett_Tech_Live_Web_Developer
 
         private void Website_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://www.BrettTechCoding.com");
+            System.Diagnostics.Process.Start("https://www.bretttechcoding.com/Projects/code-developer");
         }
 
         private void BlackToolStripMenuItem_Click(object sender, EventArgs e)
@@ -206,15 +214,26 @@ namespace Brett_Tech_Live_Web_Developer
         {
             if (HTML.Checked == true)
             {
-                webBrowser1.Visible = true;
-                fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.HTML;
-                
-                fastColoredTextBox1.Refresh();
-                Refresh();
+                try
+                {
+                    // Enable HTML
+
+                    webBrowser1.Visible = true;
+                    fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.HTML;
+
+                    fastColoredTextBox1.Refresh();
+                    Refresh();
+                }
+                catch
+                {
+                    //nothing
+                }
                 
             }
             else if (HTML.Checked == false)
             {
+                // Disable HTML
+
                 fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.Custom;
             }
         }
@@ -379,7 +398,7 @@ namespace Brett_Tech_Live_Web_Developer
 
         private void Webpageblack_Click(object sender, EventArgs e)
         {
-            fastColoredTextBox1.Text = fastColoredTextBox1.Text.Insert(fastColoredTextBox1.SelectionStart, ("  <body style='background - color:powderblue; '> "));
+            fastColoredTextBox1.Text = fastColoredTextBox1.Text.Insert(fastColoredTextBox1.SelectionStart, ("  <body style='background - color:black; '> "));
 
         }
 
@@ -423,8 +442,27 @@ namespace Brett_Tech_Live_Web_Developer
 
         private void relaodToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.Custom;
+                HTML.Checked = false;
+                JS.Checked = false;
+                cSharp.Checked = false;
+                VB.Checked = false;
+                XML.Checked = false;
+                SQL.Checked = false;
+                PHP.Checked = false;
+                Lua.Checked = false;
+
+                fastColoredTextBox1.Refresh();
+                Refresh();
+            }
+            catch
+            {
+                //nothing
+            }
         }
+         
 
         private void newTabToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
@@ -448,9 +486,6 @@ namespace Brett_Tech_Live_Web_Developer
              }
             
     }
-
-   
-
         private void OpenFileButton_Click(object sender, EventArgs e)
         {
             
@@ -487,6 +522,21 @@ namespace Brett_Tech_Live_Web_Developer
                 metroTabControl1.Dock = DockStyle.None;
             }
             catch { }
+        }
+
+        private void PowerShell_Clicked(object sender, EventArgs e)
+        {
+            if (PowerShell.Checked == true)
+            {
+                webBrowser1.Visible = false;
+                webBrowser1.Navigate("");
+                fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.PHP;
+                fastColoredTextBox1.Refresh();
+            }
+            else if (Lua.Checked == false)
+            {
+                fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.Custom;
+            }
         }
     }
 }
